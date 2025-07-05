@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Acceso</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f4f4f4;
+      text-align: center;
+      margin-top: 100px;
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+      margin: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    p {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔒 Acceso privado</h1>
+  <p>Ingresá la contraseña para continuar</p>
+  <input type="password" id="clave" placeholder="Contraseña">
+  <button onclick="verificar()">Entrar</button>
+  <p id="error"></p>
+
+  <script>
+    function verificar() {
+      const clave = document.getElementById('clave').value;
+      if (clave === "") {  // <- Podés cambiar esta contraseña
+        window.location.href = "sorpresa.html";
+      } else {
+        document.getElementById('error').innerText = "Contraseña incorrecta.";
+      }
+    }
+  </script>
+</body>
+</html>
